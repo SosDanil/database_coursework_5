@@ -6,7 +6,7 @@ PATH_TO_JSON_EMPLOYERS_ID = os.path.join(ROOT_DIR, "data/employers_id.json")
 PATH_TO_JSON_EMPLOYERS = os.path.join(ROOT_DIR, "data/employers.json")
 
 
-def config(filename="database.ini", section="postgresql"):
+def config_database(filename="/home/sosdanil/PycharmProjects/database_coursework_5/database.ini", section="postgresql"):
     # create a parser
     parser = ConfigParser()
     # read config file
