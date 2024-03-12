@@ -1,0 +1,676 @@
+{
+  "items": [
+    {
+      "id": "94571508",
+      "premium": false,
+      "name": "Водитель-экспедитор",
+      "department": null,
+      "has_test": false,
+      "response_letter_required": false,
+      "area": {
+        "id": "2759",
+        "name": "Ташкент",
+        "url": "https://api.hh.ru/areas/2759"
+      },
+      "salary": {
+        "from": null,
+        "to": 8000000,
+        "currency": "UZS",
+        "gross": false
+      },
+      "type": {
+        "id": "open",
+        "name": "Открытая"
+      },
+      "address": {
+        "city": "Ташкент",
+        "street": "улица Кизгалдок",
+        "building": "28",
+        "lat": 41.38263,
+        "lng": 69.228245,
+        "description": null,
+        "raw": "Ташкент, улица Кизгалдок, 28",
+        "metro": null,
+        "metro_stations": [],
+        "id": "14747050"
+      },
+      "response_url": null,
+      "sort_point_distance": null,
+      "published_at": "2024-03-12T08:12:56+0300",
+      "created_at": "2024-03-12T08:12:56+0300",
+      "archived": false,
+      "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=94571508",
+      "show_logo_in_search": null,
+      "insider_interview": null,
+      "url": "https://api.hh.ru/vacancies/94571508?host=hh.ru",
+      "alternate_url": "https://hh.ru/vacancy/94571508",
+      "relations": [],
+      "employer": {
+        "id": "5709954",
+        "name": "GLAMOUR COSMETICS",
+        "url": "https://api.hh.ru/employers/5709954",
+        "alternate_url": "https://hh.ru/employer/5709954",
+        "logo_urls": {
+          "original": "https://hhcdn.ru/employer-logo-original/938195.jpg",
+          "240": "https://hhcdn.ru/employer-logo/4193325.jpeg",
+          "90": "https://hhcdn.ru/employer-logo/4193324.jpeg"
+        },
+        "vacancies_url": "https://api.hh.ru/vacancies?employer_id=5709954",
+        "accredited_it_employer": false,
+        "trusted": true
+      },
+      "snippet": {
+        "requirement": "Права категории В и С. Наличие собственного автомобиля (желательно марки Damas или Labo). Владение узбекским и русским языками (разговорный). ",
+        "responsibility": "Осуществлять доставку и отгрузку в торговые точки. Обеспечивать безопасное вождение автомобиля и сохранность товаров при транспортировке. Отслеживать техническое состояние автомобиля. "
+      },
+      "contacts": null,
+      "schedule": {
+        "id": "fullDay",
+        "name": "Полный день"
+      },
+      "working_days": [],
+      "working_time_intervals": [],
+      "working_time_modes": [],
+      "accept_temporary": false,
+      "professional_roles": [
+        {
+          "id": "21",
+          "name": "Водитель"
+        }
+      ],
+      "accept_incomplete_resumes": true,
+      "experience": {
+        "id": "between1And3",
+        "name": "От 1 года до 3 лет"
+      },
+      "employment": {
+        "id": "full",
+        "name": "Полная занятость"
+      },
+      "adv_response_url": null,
+      "is_adv_vacancy": false,
+      "adv_context": null
+    },
+    {
+      "id": "93220615",
+      "premium": false,
+      "name": "Руководитель отдела маркетинга",
+      "department": null,
+      "has_test": false,
+      "response_letter_required": false,
+      "area": {
+        "id": "2759",
+        "name": "Ташкент",
+        "url": "https://api.hh.ru/areas/2759"
+      },
+      "salary": null,
+      "type": {
+        "id": "open",
+        "name": "Открытая"
+      },
+      "address": null,
+      "response_url": null,
+      "sort_point_distance": null,
+      "published_at": "2024-02-14T14:15:05+0300",
+      "created_at": "2024-02-14T14:15:05+0300",
+      "archived": false,
+      "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=93220615",
+      "show_logo_in_search": null,
+      "insider_interview": null,
+      "url": "https://api.hh.ru/vacancies/93220615?host=hh.ru",
+      "alternate_url": "https://hh.ru/vacancy/93220615",
+      "relations": [],
+      "employer": {
+        "id": "5709954",
+        "name": "GLAMOUR COSMETICS",
+        "url": "https://api.hh.ru/employers/5709954",
+        "alternate_url": "https://hh.ru/employer/5709954",
+        "logo_urls": {
+          "original": "https://hhcdn.ru/employer-logo-original/938195.jpg",
+          "240": "https://hhcdn.ru/employer-logo/4193325.jpeg",
+          "90": "https://hhcdn.ru/employer-logo/4193324.jpeg"
+        },
+        "vacancies_url": "https://api.hh.ru/vacancies?employer_id=5709954",
+        "accredited_it_employer": false,
+        "trusted": true
+      },
+      "snippet": {
+        "requirement": "Опыт работы в области маркетинга не менее 5 лет, предпочтительно на руководящей должности ( в сфере дистрибьюции). Глубокие знания и понимание...",
+        "responsibility": "Разработка и реализация стратегии маркетинга, включая позиционирование бренда, продвижение продуктов и услуг, анализ рынка и конкурентов. Управление и координация работы..."
+      },
+      "contacts": null,
+      "schedule": {
+        "id": "fullDay",
+        "name": "Полный день"
+      },
+      "working_days": [],
+      "working_time_intervals": [],
+      "working_time_modes": [],
+      "accept_temporary": false,
+      "professional_roles": [
+        {
+          "id": "37",
+          "name": "Директор по маркетингу и PR (CMO)"
+        }
+      ],
+      "accept_incomplete_resumes": false,
+      "experience": {
+        "id": "between3And6",
+        "name": "От 3 до 6 лет"
+      },
+      "employment": {
+        "id": "full",
+        "name": "Полная занятость"
+      },
+      "adv_response_url": null,
+      "is_adv_vacancy": false,
+      "adv_context": null
+    },
+    {
+      "id": "93427048",
+      "premium": false,
+      "name": "Бренд-менеджер (Косметика)",
+      "department": null,
+      "has_test": false,
+      "response_letter_required": false,
+      "area": {
+        "id": "2759",
+        "name": "Ташкент",
+        "url": "https://api.hh.ru/areas/2759"
+      },
+      "salary": {
+        "from": 10000000,
+        "to": null,
+        "currency": "UZS",
+        "gross": false
+      },
+      "type": {
+        "id": "open",
+        "name": "Открытая"
+      },
+      "address": {
+        "city": "Ташкент",
+        "street": "улица Беруни",
+        "building": "2",
+        "lat": 41.340364,
+        "lng": 69.207261,
+        "description": null,
+        "raw": "Ташкент, улица Беруни, 2",
+        "metro": null,
+        "metro_stations": [],
+        "id": "6498569"
+      },
+      "response_url": null,
+      "sort_point_distance": null,
+      "published_at": "2024-02-19T08:05:57+0300",
+      "created_at": "2024-02-19T08:05:57+0300",
+      "archived": false,
+      "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=93427048",
+      "show_logo_in_search": null,
+      "insider_interview": null,
+      "url": "https://api.hh.ru/vacancies/93427048?host=hh.ru",
+      "alternate_url": "https://hh.ru/vacancy/93427048",
+      "relations": [],
+      "employer": {
+        "id": "5709954",
+        "name": "GLAMOUR COSMETICS",
+        "url": "https://api.hh.ru/employers/5709954",
+        "alternate_url": "https://hh.ru/employer/5709954",
+        "logo_urls": {
+          "original": "https://hhcdn.ru/employer-logo-original/938195.jpg",
+          "240": "https://hhcdn.ru/employer-logo/4193325.jpeg",
+          "90": "https://hhcdn.ru/employer-logo/4193324.jpeg"
+        },
+        "vacancies_url": "https://api.hh.ru/vacancies?employer_id=5709954",
+        "accredited_it_employer": false,
+        "trusted": true
+      },
+      "snippet": {
+        "requirement": "Высшее образование. Знание русского и узбекского языка. Высокие аналитические навыки в Excel, опыт работы с Power Point. Деловые и личные...",
+        "responsibility": "Развитие бренда и ответственность за его позиционирование и представленность в рознице. Формирование ценовой стратегии и маркетинговой поддержки. Ведение маркетингового бюджета..."
+      },
+      "contacts": null,
+      "schedule": {
+        "id": "fullDay",
+        "name": "Полный день"
+      },
+      "working_days": [],
+      "working_time_intervals": [],
+      "working_time_modes": [],
+      "accept_temporary": false,
+      "professional_roles": [
+        {
+          "id": "40",
+          "name": "Другое"
+        }
+      ],
+      "accept_incomplete_resumes": false,
+      "experience": {
+        "id": "between1And3",
+        "name": "От 1 года до 3 лет"
+      },
+      "employment": {
+        "id": "full",
+        "name": "Полная занятость"
+      },
+      "adv_response_url": null,
+      "is_adv_vacancy": false,
+      "adv_context": null
+    },
+    {
+      "id": "92410786",
+      "premium": false,
+      "name": "Супервайзер торговых представителей (OSDO)",
+      "department": null,
+      "has_test": false,
+      "response_letter_required": false,
+      "area": {
+        "id": "2759",
+        "name": "Ташкент",
+        "url": "https://api.hh.ru/areas/2759"
+      },
+      "salary": {
+        "from": null,
+        "to": 14500000,
+        "currency": "UZS",
+        "gross": false
+      },
+      "type": {
+        "id": "open",
+        "name": "Открытая"
+      },
+      "address": null,
+      "response_url": null,
+      "sort_point_distance": null,
+      "published_at": "2024-02-27T09:32:06+0300",
+      "created_at": "2024-02-27T09:32:06+0300",
+      "archived": false,
+      "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=92410786",
+      "show_logo_in_search": null,
+      "insider_interview": null,
+      "url": "https://api.hh.ru/vacancies/92410786?host=hh.ru",
+      "alternate_url": "https://hh.ru/vacancy/92410786",
+      "relations": [],
+      "employer": {
+        "id": "5709954",
+        "name": "GLAMOUR COSMETICS",
+        "url": "https://api.hh.ru/employers/5709954",
+        "alternate_url": "https://hh.ru/employer/5709954",
+        "logo_urls": {
+          "original": "https://hhcdn.ru/employer-logo-original/938195.jpg",
+          "240": "https://hhcdn.ru/employer-logo/4193325.jpeg",
+          "90": "https://hhcdn.ru/employer-logo/4193324.jpeg"
+        },
+        "vacancies_url": "https://api.hh.ru/vacancies?employer_id=5709954",
+        "accredited_it_employer": false,
+        "trusted": true
+      },
+      "snippet": {
+        "requirement": "Образование: высшее или средне-специальное. Опыт работы. Опыт работы: Супервайзером OSDO от 1 года и более. Опыт разработки стратегии продаж...",
+        "responsibility": "Обеспечить развитие вверенной территории. Повысить эффективность работы и контроль над командой (торговые агенты). Выполнять планы по развитию активной клиентской базы..."
+      },
+      "contacts": null,
+      "schedule": {
+        "id": "fullDay",
+        "name": "Полный день"
+      },
+      "working_days": [],
+      "working_time_intervals": [],
+      "working_time_modes": [],
+      "accept_temporary": false,
+      "professional_roles": [
+        {
+          "id": "123",
+          "name": "Супервайзер"
+        }
+      ],
+      "accept_incomplete_resumes": false,
+      "experience": {
+        "id": "between1And3",
+        "name": "От 1 года до 3 лет"
+      },
+      "employment": {
+        "id": "full",
+        "name": "Полная занятость"
+      },
+      "adv_response_url": null,
+      "is_adv_vacancy": false,
+      "adv_context": null
+    },
+    {
+      "id": "92411188",
+      "premium": false,
+      "name": "Торговый представитель (Мирабад, Яккасарай)",
+      "department": null,
+      "has_test": false,
+      "response_letter_required": false,
+      "area": {
+        "id": "2759",
+        "name": "Ташкент",
+        "url": "https://api.hh.ru/areas/2759"
+      },
+      "salary": {
+        "from": 2500000,
+        "to": 8200000,
+        "currency": "UZS",
+        "gross": false
+      },
+      "type": {
+        "id": "open",
+        "name": "Открытая"
+      },
+      "address": null,
+      "response_url": null,
+      "sort_point_distance": null,
+      "published_at": "2024-02-27T09:32:06+0300",
+      "created_at": "2024-02-27T09:32:06+0300",
+      "archived": false,
+      "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=92411188",
+      "show_logo_in_search": null,
+      "insider_interview": null,
+      "url": "https://api.hh.ru/vacancies/92411188?host=hh.ru",
+      "alternate_url": "https://hh.ru/vacancy/92411188",
+      "relations": [],
+      "employer": {
+        "id": "5709954",
+        "name": "GLAMOUR COSMETICS",
+        "url": "https://api.hh.ru/employers/5709954",
+        "alternate_url": "https://hh.ru/employer/5709954",
+        "logo_urls": {
+          "original": "https://hhcdn.ru/employer-logo-original/938195.jpg",
+          "240": "https://hhcdn.ru/employer-logo/4193325.jpeg",
+          "90": "https://hhcdn.ru/employer-logo/4193324.jpeg"
+        },
+        "vacancies_url": "https://api.hh.ru/vacancies?employer_id=5709954",
+        "accredited_it_employer": false,
+        "trusted": true
+      },
+      "snippet": {
+        "requirement": "Опыт работы : от 1 года и выше. Владение: русским и узбекским языками. Знание: компьютерных программ (Excel, Word) и SMARTUP 5. ",
+        "responsibility": "Посещение торговых точек согласно своему маршруту. Выполнение объёма продаж и увеличение АКБ. Анализ наличия продукта и ассортимента, анализ ценовой политики..."
+      },
+      "contacts": null,
+      "schedule": {
+        "id": "fullDay",
+        "name": "Полный день"
+      },
+      "working_days": [],
+      "working_time_intervals": [],
+      "working_time_modes": [],
+      "accept_temporary": false,
+      "professional_roles": [
+        {
+          "id": "129",
+          "name": "Торговый представитель"
+        }
+      ],
+      "accept_incomplete_resumes": false,
+      "experience": {
+        "id": "between1And3",
+        "name": "От 1 года до 3 лет"
+      },
+      "employment": {
+        "id": "full",
+        "name": "Полная занятость"
+      },
+      "adv_response_url": null,
+      "is_adv_vacancy": false,
+      "adv_context": null
+    },
+    {
+      "id": "91802268",
+      "premium": false,
+      "name": "Трейд-маркетолог",
+      "department": null,
+      "has_test": false,
+      "response_letter_required": false,
+      "area": {
+        "id": "2759",
+        "name": "Ташкент",
+        "url": "https://api.hh.ru/areas/2759"
+      },
+      "salary": null,
+      "type": {
+        "id": "open",
+        "name": "Открытая"
+      },
+      "address": null,
+      "response_url": null,
+      "sort_point_distance": null,
+      "published_at": "2024-03-12T07:34:49+0300",
+      "created_at": "2024-03-12T07:34:49+0300",
+      "archived": false,
+      "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=91802268",
+      "show_logo_in_search": null,
+      "insider_interview": null,
+      "url": "https://api.hh.ru/vacancies/91802268?host=hh.ru",
+      "alternate_url": "https://hh.ru/vacancy/91802268",
+      "relations": [],
+      "employer": {
+        "id": "5709954",
+        "name": "GLAMOUR COSMETICS",
+        "url": "https://api.hh.ru/employers/5709954",
+        "alternate_url": "https://hh.ru/employer/5709954",
+        "logo_urls": {
+          "original": "https://hhcdn.ru/employer-logo-original/938195.jpg",
+          "240": "https://hhcdn.ru/employer-logo/4193325.jpeg",
+          "90": "https://hhcdn.ru/employer-logo/4193324.jpeg"
+        },
+        "vacancies_url": "https://api.hh.ru/vacancies?employer_id=5709954",
+        "accredited_it_employer": false,
+        "trusted": true
+      },
+      "snippet": {
+        "requirement": "Основы маркетинга (концепцию маркетинга, основы управления маркетингом, способы и направления исследования рынка) и опыт работы в трейд-маркетинге. ",
+        "responsibility": "Изучать особенности продвигаемого продукта, анализировать требования потребителей к продукту на основе результатов маркетинговых исследований. Разрабатывать стратегию продвижения продукта на рынок..."
+      },
+      "contacts": null,
+      "schedule": {
+        "id": "fullDay",
+        "name": "Полный день"
+      },
+      "working_days": [],
+      "working_time_intervals": [],
+      "working_time_modes": [],
+      "accept_temporary": false,
+      "professional_roles": [
+        {
+          "id": "68",
+          "name": "Менеджер по маркетингу, интернет-маркетолог"
+        }
+      ],
+      "accept_incomplete_resumes": false,
+      "experience": {
+        "id": "between3And6",
+        "name": "От 3 до 6 лет"
+      },
+      "employment": {
+        "id": "full",
+        "name": "Полная занятость"
+      },
+      "adv_response_url": null,
+      "is_adv_vacancy": false,
+      "adv_context": null
+    },
+    {
+      "id": "93429594",
+      "premium": false,
+      "name": "Супервайзер торговых представителей",
+      "department": null,
+      "has_test": false,
+      "response_letter_required": false,
+      "area": {
+        "id": "2759",
+        "name": "Ташкент",
+        "url": "https://api.hh.ru/areas/2759"
+      },
+      "salary": {
+        "from": null,
+        "to": 15000000,
+        "currency": "UZS",
+        "gross": false
+      },
+      "type": {
+        "id": "open",
+        "name": "Открытая"
+      },
+      "address": {
+        "city": "Ташкент",
+        "street": "улица Беруни",
+        "building": "2",
+        "lat": 41.340364,
+        "lng": 69.207261,
+        "description": null,
+        "raw": "Ташкент, улица Беруни, 2",
+        "metro": null,
+        "metro_stations": [],
+        "id": "6498569"
+      },
+      "response_url": null,
+      "sort_point_distance": null,
+      "published_at": "2024-02-19T08:39:51+0300",
+      "created_at": "2024-02-19T08:39:51+0300",
+      "archived": false,
+      "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=93429594",
+      "show_logo_in_search": null,
+      "insider_interview": null,
+      "url": "https://api.hh.ru/vacancies/93429594?host=hh.ru",
+      "alternate_url": "https://hh.ru/vacancy/93429594",
+      "relations": [],
+      "employer": {
+        "id": "5709954",
+        "name": "GLAMOUR COSMETICS",
+        "url": "https://api.hh.ru/employers/5709954",
+        "alternate_url": "https://hh.ru/employer/5709954",
+        "logo_urls": {
+          "original": "https://hhcdn.ru/employer-logo-original/938195.jpg",
+          "240": "https://hhcdn.ru/employer-logo/4193325.jpeg",
+          "90": "https://hhcdn.ru/employer-logo/4193324.jpeg"
+        },
+        "vacancies_url": "https://api.hh.ru/vacancies?employer_id=5709954",
+        "accredited_it_employer": false,
+        "trusted": true
+      },
+      "snippet": {
+        "requirement": "Образование: высшее или средне-специальное. Опыт работы. Опыт работы: Супервайзером OSDO от 1 года и более. Опыт разработки стратегии продаж...",
+        "responsibility": "Обеспечить развитие вверенной территории. Повысить эффективность работы и контроль над командой (торговые агенты). Выполнять планы по развитию активной клиентской базы..."
+      },
+      "contacts": null,
+      "schedule": {
+        "id": "fullDay",
+        "name": "Полный день"
+      },
+      "working_days": [],
+      "working_time_intervals": [],
+      "working_time_modes": [],
+      "accept_temporary": false,
+      "professional_roles": [
+        {
+          "id": "123",
+          "name": "Супервайзер"
+        }
+      ],
+      "accept_incomplete_resumes": false,
+      "experience": {
+        "id": "between1And3",
+        "name": "От 1 года до 3 лет"
+      },
+      "employment": {
+        "id": "full",
+        "name": "Полная занятость"
+      },
+      "adv_response_url": null,
+      "is_adv_vacancy": false,
+      "adv_context": null
+    },
+    {
+      "id": "93128405",
+      "premium": false,
+      "name": "Торговый представитель КАМ",
+      "department": null,
+      "has_test": false,
+      "response_letter_required": false,
+      "area": {
+        "id": "2759",
+        "name": "Ташкент",
+        "url": "https://api.hh.ru/areas/2759"
+      },
+      "salary": {
+        "from": null,
+        "to": 10000000,
+        "currency": "UZS",
+        "gross": false
+      },
+      "type": {
+        "id": "open",
+        "name": "Открытая"
+      },
+      "address": null,
+      "response_url": null,
+      "sort_point_distance": null,
+      "published_at": "2024-02-13T10:21:09+0300",
+      "created_at": "2024-02-13T10:21:09+0300",
+      "archived": false,
+      "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=93128405",
+      "show_logo_in_search": null,
+      "insider_interview": null,
+      "url": "https://api.hh.ru/vacancies/93128405?host=hh.ru",
+      "alternate_url": "https://hh.ru/vacancy/93128405",
+      "relations": [],
+      "employer": {
+        "id": "5709954",
+        "name": "GLAMOUR COSMETICS",
+        "url": "https://api.hh.ru/employers/5709954",
+        "alternate_url": "https://hh.ru/employer/5709954",
+        "logo_urls": {
+          "original": "https://hhcdn.ru/employer-logo-original/938195.jpg",
+          "240": "https://hhcdn.ru/employer-logo/4193325.jpeg",
+          "90": "https://hhcdn.ru/employer-logo/4193324.jpeg"
+        },
+        "vacancies_url": "https://api.hh.ru/vacancies?employer_id=5709954",
+        "accredited_it_employer": false,
+        "trusted": true
+      },
+      "snippet": {
+        "requirement": "Образование: средне-специальное или высшее. Аналитическое мышление, умение работать в многозадачности, стрессоустойчивость, эмоциональный интеллект. Уверенный пользователь Word, Excel, Smart up. ",
+        "responsibility": "Активное участие в переговорах с категорийными менеджерами сетей. Опыт работы с крупными сетями ( Корзинка, Макро, Магнум, Хавас и тд.). "
+      },
+      "contacts": null,
+      "schedule": {
+        "id": "fullDay",
+        "name": "Полный день"
+      },
+      "working_days": [],
+      "working_time_intervals": [],
+      "working_time_modes": [],
+      "accept_temporary": false,
+      "professional_roles": [
+        {
+          "id": "129",
+          "name": "Торговый представитель"
+        }
+      ],
+      "accept_incomplete_resumes": true,
+      "experience": {
+        "id": "between1And3",
+        "name": "От 1 года до 3 лет"
+      },
+      "employment": {
+        "id": "full",
+        "name": "Полная занятость"
+      },
+      "adv_response_url": null,
+      "is_adv_vacancy": false,
+      "adv_context": null
+    }
+  ],
+  "found": 8,
+  "pages": 1,
+  "page": 0,
+  "per_page": 20,
+  "clusters": null,
+  "arguments": null,
+  "fixes": null,
+  "suggests": null,
+  "alternate_url": "https://hh.ru/search/vacancy?employer_id=5709954&enable_snippets=true"
+}

@@ -2,12 +2,17 @@ import requests
 import json
 
 
-def get_employers_from_hh_api(employers_id: list):
-    params = {
-        "page": 0,
-        "per_page": 100
-    }
-    response = requests.get(f"https://api.hh.ru/vacancies/", params=params)
-    hh_data = json.loads(response.text)
-    hh_vacancies = hh_data["items"]
-    return hh_vacancies
+def get_data_from_hh_api(employers_id: list) -> list[dict]:
+    data = []
+    for employer_id in employers_id:
+        response = requests.get(f"https://api.hh.ru/employers/{employer_id}")
+        employer_data = json.loads(response.text)
+
+        response2 = requests.get(employer_data['vacancies_url'])
+        vacancies_data = json.loads(response2.text)
+        data.append({
+            'employer': employer_data,
+            'vacancies': vacancies_data['items'][0]
+        })
+
+    return data
