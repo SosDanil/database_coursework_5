@@ -12,7 +12,10 @@ def get_data_from_hh_api(employers_id: list) -> list[dict]:
         vacancies_data = json.loads(response2.text)
         data.append({
             'employer': employer_data,
-            'vacancies': vacancies_data['items'][0]
+            'vacancies': vacancies_data['items']
         })
 
     return data
+
+
+
