@@ -58,3 +58,35 @@ def create_database(database_name: str, params: dict):
         """)
     conn.commit()
     conn.close()
+
+
+def save_data_to_database(data: list[dict], database_name, params):
+    """Занесение данных о работодателях и вакансиях в таблицу"""
+
+    conn = psycopg2.connect(dbname=database_name, **params)
+
+    with conn.cursor() as cur:
+        for employer_data in data:
+            employer = employer_data['employer']
+            cur.execute(
+                """
+                INSERT INTO employers (name, url, city, open_vacancies, description)
+                VALUES (%s, %s, %s, %s, %s)
+                RETURNING employer_id
+                """,
+                (employer['name'], employer['alternate_url'], employer['area']['name'],
+                 int(employer['open_vacancies']), employer['description'])
+            )
+            employer_id = cur.fetchone()[0]
+            vacancies_data = employer['vacancies']
+            for vacancy in vacancies_data:
+                cur.execute(
+                    """
+                    INSERT INTO vacancies (employer_id, name, salary_from, salary_to, url, publish_date)
+                    VALUES (%s, %s, %s, %s, %s, %s)
+                    """,
+                    (employer_id, vacancy['name'], vacancy.get('salary'['from']), vacancy.get('salary'['to']),
+                     vacancy['alternate_url'], vacancy['published_at'])
+                )
+    conn.commit()
+    conn.close()
