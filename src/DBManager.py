@@ -112,13 +112,16 @@ class DBManager:
         conn.close()
 
     def get_companies_and_vacancies_count(self):
+        """Получает список всех компаний и количество вакансий у каждой компании"""
         conn = psycopg2.connect(dbname=self.database_name, **self.parameters)
         with conn.cursor() as cur:
-            cur.execute("""
+            cur.execute(
+                """
             SELECT company_name, COUNT(*) FROM employers
             JOIN vacancies USING(employer_id)
             GROUP BY company_name
-            """)
+            """
+            )
             companies = cur.fetchall()
         conn.commit()
         conn.close()
@@ -126,15 +129,62 @@ class DBManager:
             print(f"Название компании: {company[0]}\n"
                   f"Количество вакансий: {company[1]}\n")
 
-
     def get_all_vacancies(self):
-        pass
+        """Получает список всех вакансий с указанием названия компании,
+         названия вакансии, зарплаты и ссылки на вакансию"""
+        conn = psycopg2.connect(dbname=self.database_name, **self.parameters)
+        with conn.cursor() as cur:
+            cur.execute(
+                """
+                SELECT company_name, vacancy_name, salary_from, salary_to, vacancy_url
+                FROM vacancies JOIN employers USING (employer_id)
+                """
+            )
+            vacancies = cur.fetchall()
+        conn.commit()
+        conn.close()
+        for vacancy in vacancies:
+            if vacancy[2] == 0 and vacancy[3] == 0:
+                print(f"Название компании: {vacancy[0]}\n"
+                      f"Название должности: {vacancy[1]}\n"
+                      f"Зарплата не указана\n"
+                      f"Ссылка на вакансию: {vacancy[4]}\n")
+            elif vacancy[2] == 0:
+                print(f"Название компании: {vacancy[0]}\n"
+                      f"Название должности: {vacancy[1]}\n"
+                      f"Зарплата до {vacancy[3]}\n"
+                      f"Ссылка на вакансию: {vacancy[4]}\n")
+            elif vacancy[3] == 0:
+                print(f"Название компании: {vacancy[0]}\n"
+                      f"Название должности: {vacancy[1]}\n"
+                      f"Зарплата от {vacancy[2]}\n"
+                      f"Ссылка на вакансию: {vacancy[4]}\n")
+            else:
+                print(f"Название компании: {vacancy[0]}\n"
+                      f"Название должности: {vacancy[1]}\n"
+                      f"Зарплата от {vacancy[2]} до {vacancy[3]}\n"
+                      f"Ссылка на вакансию: {vacancy[4]}\n")
 
     def get_avr_salary(self):
-        pass
+        """Получает среднюю зарплату по вакансиям."""
+        conn = psycopg2.connect(dbname=self.database_name, **self.parameters)
+        with conn.cursor() as cur:
+            cur.execute(
+                """
+                SELECT AVG(salary_from), AVG(salary_to) FROM vacancies
+                """
+            )
+            average_salary = cur.fetchall()
+        conn.commit()
+        conn.close()
+
+        print(f"Средняя зарплата от: {average_salary[0][0]} руб.\n"
+              f"Средняя зарплата до: {average_salary[0][1]} руб.\n")
 
     def get_vacancies_with_higher_salary(self):
+        """Получает список всех вакансий, у которых зарплата выше средней по всем вакансиям"""
         pass
 
     def get_vacancies_with_keyword(self):
+        """получает список всех вакансий, в названии которых содержатся переданные в метод слова, например python."""
         pass
