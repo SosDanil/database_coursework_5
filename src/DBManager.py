@@ -182,9 +182,31 @@ class DBManager:
               f"Средняя зарплата до: {average_salary[0][1]} руб.\n")
 
     def get_vacancies_with_higher_salary(self):
-        """Получает список всех вакансий, у которых зарплата выше средней по всем вакансиям"""
-        pass
+        """Получает список всех вакансий, у которых зарплата выше средней по всем вакансиям
+        Смотрим только по зарплатам "от" - они в приоритете"""
+        conn = psycopg2.connect(dbname=self.database_name, **self.parameters)
+        with conn.cursor() as cur:
+            cur.execute(
+                """
+                SELECT vacancy_name, salary_from, salary_to, vacancy_url FROM vacancies
+                WHERE salary_from > (SELECT AVG(salary_from) FROM vacancies)
+                """
+            )
+            vacancies = cur.fetchall()
+        conn.commit()
+        conn.close()
 
-    def get_vacancies_with_keyword(self):
+        for vacancy in vacancies:
+            if vacancy[2] == 0:
+                print(f"Название должности: {vacancy[0]}\n"
+                      f"Зарплата от: {vacancy[1]} руб.\n"
+                      f"Ссылка на вакансию: {vacancy[3]}\n")
+            else:
+                print(f"Название должности: {vacancy[0]}\n"
+                      f"Зарплата от: {vacancy[1]} руб.\n"
+                      f"Зарплата до: {vacancy[2]} руб.\n"
+                      f"Ссылка на вакансию: {vacancy[3]}\n")
+
+    def get_vacancies_with_keyword(self, keyword):
         """получает список всех вакансий, в названии которых содержатся переданные в метод слова, например python."""
         pass
