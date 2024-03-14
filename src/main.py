@@ -22,15 +22,13 @@ def main():
     db_manager.create_database()
     db_manager.create_tables()
     db_manager.save_data_to_database(hh_data)
+    db_manager.get_companies_and_vacancies_count()
+    db_manager.get_all_vacancies()
+    db_manager.get_avr_salary()
+    db_manager.get_vacancies_with_higher_salary()
+
+    keyword = input("Введите название вакансии").lower()
+    db_manager.get_vacancies_with_keyword(keyword)
 
 
 main()
-
-# response = requests.get("https://api.hh.ru/employers/5709954")
-# hh_data = json.loads(response.text)
-# print(hh_data)
-# response2 = requests.get(hh_data['vacancies_url'])
-# print(response2.text)
-
-
-
