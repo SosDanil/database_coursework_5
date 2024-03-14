@@ -3,6 +3,7 @@ import json
 from config import config_database
 from utils import get_data_from_hh_api, create_database, save_data_to_database
 from config import PATH_TO_JSON_EMPLOYERS_ID
+from DBManager import DBManager
 
 
 def main():
@@ -18,6 +19,11 @@ def main():
     params = config_database()
     create_database('course_work_5', params)
     save_data_to_database(data, 'course_work_5', params)
+
+    dbmanager = DBManager()
+    dbmanager.database_name = 'course_work_5'
+    data3 = dbmanager.get_companies_and_vacancies_count(params)
+    print(data3)
 
 
 main()
