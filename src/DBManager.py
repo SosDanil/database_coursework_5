@@ -20,6 +20,7 @@ class DBManager:
 
     def create_tables(self):
         """Создает таблицы в базе данных для сохранения информации о работодателях и их вакансиях"""
+
         conn = psycopg2.connect(dbname=self.database_name, **self.parameters)
         with conn.cursor() as cur:
             cur.execute("""
@@ -75,7 +76,8 @@ class DBManager:
                              published_at)
                             VALUES (%s, %s, %s, %s, %s, %s)
                             """,
-                            (employer_id, vacancy['name'], 0, 0, vacancy['alternate_url'], vacancy['published_at'])
+                            (employer_id, vacancy['name'].lower(), 0, 0, vacancy['alternate_url'],
+                             vacancy['published_at'])
                         )
                     elif vacancy['salary']['from'] is None and vacancy['salary']['to'] is not None:
                         cur.execute(
@@ -84,7 +86,7 @@ class DBManager:
                              published_at)
                             VALUES (%s, %s, %s, %s, %s, %s)
                             """,
-                            (employer_id, vacancy['name'], 0, vacancy['salary']['to'],
+                            (employer_id, vacancy['name'].lower(), 0, vacancy['salary']['to'],
                              vacancy['alternate_url'], vacancy['published_at'])
                         )
                     elif vacancy['salary']['from'] is not None and vacancy['salary']['to'] is None:
@@ -94,7 +96,7 @@ class DBManager:
                              published_at)
                             VALUES (%s, %s, %s, %s, %s, %s)
                             """,
-                            (employer_id, vacancy['name'], vacancy['salary']['from'], 0,
+                            (employer_id, vacancy['name'].lower(), vacancy['salary']['from'], 0,
                              vacancy['alternate_url'], vacancy['published_at'])
                         )
                     else:
@@ -104,7 +106,7 @@ class DBManager:
                              published_at)
                             VALUES (%s, %s, %s, %s, %s, %s)
                             """,
-                            (employer_id, vacancy['name'], vacancy['salary']['from'], vacancy['salary']['to'],
+                            (employer_id, vacancy['name'].lower(), vacancy['salary']['from'], vacancy['salary']['to'],
                              vacancy['alternate_url'], vacancy['published_at'])
                         )
 
@@ -113,6 +115,7 @@ class DBManager:
 
     def get_companies_and_vacancies_count(self):
         """Получает список всех компаний и количество вакансий у каждой компании"""
+
         conn = psycopg2.connect(dbname=self.database_name, **self.parameters)
         with conn.cursor() as cur:
             cur.execute(
@@ -132,6 +135,7 @@ class DBManager:
     def get_all_vacancies(self):
         """Получает список всех вакансий с указанием названия компании,
          названия вакансии, зарплаты и ссылки на вакансию"""
+
         conn = psycopg2.connect(dbname=self.database_name, **self.parameters)
         with conn.cursor() as cur:
             cur.execute(
@@ -167,6 +171,7 @@ class DBManager:
 
     def get_avr_salary(self):
         """Получает среднюю зарплату по вакансиям."""
+
         conn = psycopg2.connect(dbname=self.database_name, **self.parameters)
         with conn.cursor() as cur:
             cur.execute(
@@ -184,6 +189,7 @@ class DBManager:
     def get_vacancies_with_higher_salary(self):
         """Получает список всех вакансий, у которых зарплата выше средней по всем вакансиям
         Смотрим только по зарплатам "от" - они в приоритете"""
+
         conn = psycopg2.connect(dbname=self.database_name, **self.parameters)
         with conn.cursor() as cur:
             cur.execute(
@@ -208,5 +214,35 @@ class DBManager:
                       f"Ссылка на вакансию: {vacancy[3]}\n")
 
     def get_vacancies_with_keyword(self, keyword):
-        """получает список всех вакансий, в названии которых содержатся переданные в метод слова, например python."""
-        pass
+        """Получает список всех вакансий, в названии которых содержатся переданные в метод слова, например python."""
+
+        conn = psycopg2.connect(dbname=self.database_name, **self.parameters)
+        with conn.cursor() as cur:
+            cur.execute(
+                f"""
+                SELECT vacancy_name, salary_from, salary_to, vacancy_url FROM vacancies
+                WHERE vacancy_name LIKE '{keyword}%' OR vacancy_name LIKE '%{keyword}'
+                OR vacancy_name LIKE '%{keyword}%'
+                """
+            )
+            vacancies = cur.fetchall()
+        conn.commit()
+        conn.close()
+
+        for vacancy in vacancies:
+            if vacancy[1] == 0 and vacancy[2] == 0:
+                print(f"Название должности: {vacancy[0]}\n"
+                      f"Зарплата не указана\n"
+                      f"Ссылка на вакансию: {vacancy[3]}\n")
+            elif vacancy[1] == 0:
+                print(f"Название должности: {vacancy[0]}\n"
+                      f"Зарплата до {vacancy[2]}\n"
+                      f"Ссылка на вакансию: {vacancy[3]}\n")
+            elif vacancy[2] == 0:
+                print(f"Название должности: {vacancy[0]}\n"
+                      f"Зарплата от {vacancy[1]}\n"
+                      f"Ссылка на вакансию: {vacancy[3]}\n")
+            else:
+                print(f"Название должности: {vacancy[0]}\n"
+                      f"Зарплата от {vacancy[1]} до {vacancy[2]}\n"
+                      f"Ссылка на вакансию: {vacancy[3]}\n")
