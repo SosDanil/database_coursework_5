@@ -13,7 +13,7 @@ class DBManager:
         conn.autocommit = True
         cur = conn.cursor()
 
-        cur.execute(f"DROP DATABASE {self.database_name}")
+        cur.execute(f"DROP DATABASE IF EXISTS {self.database_name}")
         cur.execute(f"CREATE DATABASE {self.database_name}")
 
         conn.close()

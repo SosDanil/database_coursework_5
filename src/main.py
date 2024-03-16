@@ -17,7 +17,7 @@ def main():
     hh_data = get_data_from_hh_api(list_employers_id)
 
     params = config_database()
-    db_manager = DBManager('course_work_5', params)
+    db_manager = DBManager('hh_parser', params)
 
     db_manager.create_database()
     db_manager.create_tables()

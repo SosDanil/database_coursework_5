@@ -5,7 +5,7 @@ ROOT_DIR = os.path.dirname(__file__)
 PATH_TO_JSON_EMPLOYERS_ID = os.path.join(ROOT_DIR, "data/employers_id.json")
 
 
-def config_database(filename="/home/sosdanil/PycharmProjects/database_coursework_5/database.ini", section="postgresql"):
+def config_database(filename=f"{ROOT_DIR}/database.ini", section="postgresql"):
     # create a parser
     parser = ConfigParser()
     # read config file
