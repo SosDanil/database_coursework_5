@@ -22,12 +22,17 @@ def main():
     db_manager.create_database()
     db_manager.create_tables()
     db_manager.save_data_to_database(hh_data)
-    db_manager.get_companies_and_vacancies_count()
-    db_manager.get_all_vacancies()
-    db_manager.get_avr_salary()
-    db_manager.get_vacancies_with_higher_salary()
 
-    keyword = input("Введите название вакансии").lower()
+    db_manager.get_companies_and_vacancies_count()
+    print('----------------------------------------------------------------------------')
+    db_manager.get_all_vacancies()
+    print('----------------------------------------------------------------------------')
+    db_manager.get_avr_salary()
+    print('----------------------------------------------------------------------------')
+    db_manager.get_vacancies_with_higher_salary()
+    print('----------------------------------------------------------------------------')
+
+    keyword = input("Введите название вакансии  ").lower()
     db_manager.get_vacancies_with_keyword(keyword)
 
 

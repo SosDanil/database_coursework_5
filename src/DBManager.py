@@ -53,7 +53,6 @@ class DBManager:
         """Занесение данных о работодателях и вакансиях в таблицу"""
 
         conn = psycopg2.connect(dbname=self.database_name, **self.parameters)
-
         with conn.cursor() as cur:
             for employer_data in data:
                 employer = employer_data['employer']
